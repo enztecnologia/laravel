@@ -67,4 +67,3 @@ COPY --from=composer:1 /usr/bin/composer /usr/local/bin/composer
 
 # TODO remove prestissimo when composer hits v2
 RUN composer global require hirak/prestissimo --no-plugins --no-scripts
-RUN composer install --prefer-dist --no-interaction --no-scripts --no-autoloader
