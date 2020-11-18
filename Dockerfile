@@ -64,7 +64,4 @@ RUN docker-php-ext-install \
 COPY --from=caddy:2 /usr/bin/caddy /usr/local/bin/caddy
 
 # Install composer
-COPY --from=composer:1 /usr/bin/composer /usr/local/bin/composer
-
-# TODO remove prestissimo when composer hits v2
-RUN composer global require hirak/prestissimo --no-plugins --no-scripts
+COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
